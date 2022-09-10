@@ -35,11 +35,3 @@ module "s3_bucket_for_logs" {
   attach_elb_log_delivery_policy = true  # Required for ALB logs
   attach_lb_log_delivery_policy  = true  # Required for ALB/NLB logs
 }
-
-# This S3 bucket will not be created
-module "s3_bucket" {
-  source = "terraform-aws-modules/s3-bucket/aws"
-
-  create_bucket = false
-  # ... omitted
-}
